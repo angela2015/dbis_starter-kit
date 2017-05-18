@@ -105,7 +105,7 @@ class UserTeacherController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $selecttagid = array();
             if (is_array($model->tagid)) {
-               foreach ($model->tagid as $num => $item) {
+                foreach ($model->tagid as $num => $item) {
                     array_push($selecttagid, $item+1);
                 }
                 $model->tagid = implode(',', $selecttagid);
